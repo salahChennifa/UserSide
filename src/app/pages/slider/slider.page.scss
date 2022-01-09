@@ -1,0 +1,43 @@
+ion-content {
+    --overflow : hidden;
+    text-align: center;
+    --ion-background-color : #e7f0f7;
+}
+
+ion-slide {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+ion-slide p {
+   margin: 0;
+   font-size: 13px !important;
+   line-height: 15px !important;
+   color: #000;
+   margin-top: 0 !important;
+   padding-left: 35px;
+   padding-right: 35px;
+   padding-top: 10px;
+   padding-bottom: 30px;
+   margin-bottom: 10px;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top:45%;
+    -webkit-transform:translate(-49%, -49%);
+    transform: translate(-49%, -49%);
+    width: 90%;
+}
+
+ion-slides{
+    padding-top: 10px;
+}
+
+[text-center]{
+    color: "#e06278";
+}

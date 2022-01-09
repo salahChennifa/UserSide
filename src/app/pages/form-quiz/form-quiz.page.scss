@@ -1,0 +1,199 @@
+.quizForm{
+    text-align: center;
+    margin-top: 50%;
+    .notAnswer{
+        .question{
+            text-align: center;
+            ion-text{
+                h1{
+                    font-family: FreeMono, monospace;
+                    font-size: 20px;
+                }
+            }
+        }
+        .options{
+            margin-top: 30%;
+            text-align: center;
+            font-family: FreeMono, monospace;
+            //background-color: green;
+        }
+    }
+
+    .answerFalse{
+        .question{
+            text-align: center;
+            ion-text{
+                h1{
+                    font-family: FreeMono, monospace;
+                    font-size: 20px;
+                }
+            }
+            ion-icon{
+                margin-top: 20px;
+                ion-button{
+                    p{
+                        font-family:FreeMono, monospace;
+                    }
+                }
+            }
+        }
+        
+    }
+    .answerTrue{
+        .question{
+            text-align: center;
+            ion-text{
+                h1{
+                    font-family: FreeMono, monospace;
+                    font-size: 20px;
+                }
+            }
+        }
+
+
+        .actualitePart{
+            img{
+              padding: 15px;
+            }
+            .live-event {
+              border-radius: 10px;
+              box-shadow: 0px 3px 12px 2px rgba(0,0,0,0.16);
+              margin: 0 26px 26px 26px;
+              display: flex;
+              justify-content: space-between;
+            
+              .info {
+                padding: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            
+                .content {
+                  float: left;
+                  h6 {
+                    color: #364F6B;
+                    font-size: 14px;
+                    font-weight: bold;
+                    //margin-bottom: ;
+                    margin-top: 5px;
+                    text-align: left;
+                  }
+                  .stats {
+                    display: flex;
+                    margin-bottom: 5px;
+                    margin-top: 2px;
+            
+                    span {
+                      display: flex;
+                      align-items: center;
+                      color: #364F6B80;
+                      font-size: 12px;
+                      margin-right: 10px;
+                    }
+                  }
+                }
+            
+                .indicator {
+                  float: left;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            
+                  div {
+                    //background: #93e7c0;
+                    border-radius: 12px;
+                    padding: 15px;
+                    //color: var(--ion-color-primary);
+                  }
+                }
+              }
+            }
+          }
+       
+    }
+}
+
+///// 
+.startQuiz{
+    margin-top: 20%;
+    text-align: center;
+    ion-text{
+        span{
+            font-size: large;
+            font-family: FreeMono, monospace;
+        }
+    }
+}
+
+
+.container {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	//border: 2px solid black;
+}
+
+.btn{
+	margin: 20px auto;
+	border: none;
+	padding: 10px 44px;
+	font-size: 20px;
+	position: relative;
+	&::before{
+		transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	& .btn-text{
+		color: white;
+	
+		mix-blend-mode: difference;
+	}
+	&:hover{
+		&::before{
+			background: black;
+			width: 100%;
+            
+		}
+	}
+	//rounded btn styles
+	&.rounded{
+		border-radius:50px;
+		& .text-green{
+			color:#00F0B5;
+			mix-blend-mode: difference;
+		}
+		
+		&::before{
+			border-radius: 50px;
+			width: 25%;
+			background: #00F0B5;
+		}
+		&:hover{
+			&::before{
+			background: #00F0B5;
+			width: 100%;
+            // border: none;
+			}
+		}	
+	}
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px;
+}
+.followings p {
+    color: white;
+    margin: 8px 0px 0px 0px;
+}
+
+
+	

@@ -1,0 +1,42 @@
+.form{
+    margin-top: 10%;
+    ion-item{
+        border-radius: 10px;
+        border-color: black ;
+        border-width: 2px;
+        border-style: solid;
+        margin-bottom: 10px;;
+        // border-radius: 5px;
+        
+    }
+}
+
+// .logo{
+//     margin-top: 20%;
+// }
+
+ion-button{
+    text-transform: none;
+}
+.left{
+    margin-top: 10px;
+    margin-left:-15px;
+}
+    // .right{
+    //     margin-right: -30%;
+    // }
+h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid rgb(122, 122, 122); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+} 
+.button-color-changed {
+    background-color:  #fff;
+    color: #3b423f;
+}

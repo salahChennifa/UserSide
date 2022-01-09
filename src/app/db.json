@@ -1,0 +1,64 @@
+{
+ 
+  
+  
+ 
+    "quiz": {
+      "sHs4sLHBMxOSpW98y52g": {
+        "niveau": {
+          "1": {
+            "qcm": {
+              "1": {
+                "tag": "pollution",
+                "option": {
+                  "1": "éduire le plus possible les doses de produits d’entretien ",
+                  "2": "Regrouper les restes de produits toxiques"
+                },
+                "answer": 1,
+                "question": "comment peut on arrêter la pollution ?",
+                "point": 50
+              },
+              "2": {
+                "answer": "3",
+                "question": "c'est quoi la foret?",
+                "option": {
+                  "1": "Vaste étendue de terrain couverte d'arbres",
+                  "2": "simple lieu",
+                  "3": "Une forêt est un milieu naturel "
+                },
+                "tag": "foret",
+                "point": 50
+              }
+            }
+          },
+          "2": {
+            "qcm": {
+              "1": {
+                "option": {
+                  "1": "bien ",
+                  "2": "normale",
+                  "3": "très bien"
+                },
+                "answer": 3,
+                "tag": "propreté ",
+                "point": 75,
+                "queston": "que pensez vous de la propreté à l'intérieur "
+              },
+              "2": {
+                "answer": 1,
+                "point": "25",
+                "option": {
+                  "1": "oui",
+                  "2": "non, pas forcément"
+                },
+                "tag": "hygiène",
+                "question": "pensez vous respecter les règles d'hygiène "
+              }
+            }
+          }
+        }
+       
+      }
+    }
+ 
+}

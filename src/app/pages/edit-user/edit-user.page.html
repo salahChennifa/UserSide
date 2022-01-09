@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/profile" color="dark">Go</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Details User</ion-card-title>
+    </ion-card-header>
+
+    <div class="flex">
+      <div class="box-border">
+        <div class="border-white">
+          <div class="img-box">
+            
+            <img [src]="user.imageUrl">
+          </div>
+         
+        </div>
+        <p style="font-size: large;" class="text-center">&nbsp;
+          <strong >Edit</strong>&nbsp;
+          <ion-icon (click)="showBalance = !showBalance"  name="create-outline"  style="color: black; height: 20px; width: 20px;" ></ion-icon>
+  
+        </p>
+      </div>
+      
+    </div>
+
+    <div *ngIf="showBalance">
+      <ion-input type="file" (change)="uploadImage($event)"></ion-input>
+  </div>
+
+  <br>
+  <br>
+  
+    <div class="form">
+      
+      <ion-item lines="none">
+      
+        <ion-input type="text" [(ngModel)]="user.name" ></ion-input>
+      </ion-item>
+    
+      
+      <ion-item lines="none">
+      
+        <ion-input  type="email"  [(ngModel)]="user.email" ></ion-input>
+      </ion-item>
+
+      <strong>
+        <hr style ="border: 2px solid grey;margin-left: 25px; margin-right: 25px;">
+      </strong>   
+
+      <p  style="font-size: large; text-align: center;" >
+        <strong class="text-center">Completer vos informations </strong>
+
+      </p>
+      <div>
+
+        <ion-label style="font-size: large; text-align: center; color: black;" >
+         <strong>Telephone :</strong> 
+        </ion-label>
+        <ion-item lines="none">
+          
+            <ion-input  type="text"  [(ngModel)]="newPhone" >+212{{user.Phone}}</ion-input>
+          </ion-item>
+
+          <p></p>
+          <br>
+          <ion-label style="font-size: large; text-align: center; color: black;" >
+            <strong>Date de naissance :</strong> 
+          </ion-label>
+          <ion-item lines="none">
+          
+            <ion-input  type="text"  [(ngModel)]="newBirth" >{{user.BirthDate}}</ion-input>
+
+          </ion-item>
+      </div>
+     
+  
+      <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12" class="ion-text-center">
+           
+          </ion-col>
+          <ion-col size="12" class="ion-text-center">
+            <ion-button  (click)="onUpdate()">
+             <span>Update</span>
+            </ion-button>
+            &nbsp;&nbsp;
+            <ion-button   (click)="addItems()" >
+              <span>Ajouter</span>
+             </ion-button>
+
+       
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        
+  
+     
+    
+    
+     
+    
+    
+     
+    
+    </div>
+    
+  </ion-card>
+
+
+</ion-content>

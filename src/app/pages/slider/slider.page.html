@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="center" >
+    <ion-slides #slides 
+    pager="true" 
+    [options]="slideOpts" (ionSlideDidChange)="ionSlideChange($event)">
+
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/sliders/dustbin.svg">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, minima.</p>
+      </ion-slide>
+      
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/sliders/idea.svg">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, minima.</p>
+      </ion-slide>
+
+      <ion-slide class="step-one">
+        <img margintop20 src="../../assets/sliders/renewable-energy.svg">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, minima.</p>
+      </ion-slide>
+
+    </ion-slides>
+    <ion-button
+    class="tour-button"
+    (click)="next()"
+     >
+        {{buttonName}}
+    </ion-button>
+  </div>
+</ion-content>

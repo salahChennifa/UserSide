@@ -1,0 +1,29 @@
+<div class="followings">
+  <ion-icon  name="arrow-back-outline" routerLink="/home" style="color: white; height: 30px; width: 30px;"></ion-icon>
+  
+</div>
+<br>
+<ion-content>
+  
+  <ion-text style="margin-left: 15px; font-size: 20px; font-family: FreeMono, monospace;"  class="ion-text-left text-secondary" color="secondary">
+   {{listNew.date | date :'medium'}}  &nbsp;&nbsp;&nbsp;&nbsp;<br> <ion-text   color="dark" style="font-family: FreeMono, monospace;margin-left: 10px;margin-right: 10px;" >20min lecture </ion-text>
+  </ion-text>
+
+  <br><br>
+
+  <ion-card>
+    <img src="../../../assets/icon/care.png" >
+  </ion-card>
+
+  <ion-text style="font-size: 15px; margin-left: 20px; margin-right: 20px;" color="dark" >
+   <p style="font-family: FreeMono, monospace;">
+    {{listNew.body}}
+  </p>
+   </ion-text>
+  <br>
+  <hr>
+   <ion-icon name="thumbs-up-outline" style="width: 40px; height: 40px;margin-left: 20px;" (click)="updateLike()"> </ion-icon>
+   <ion-icon name="thumbs-up-outline" style="width: 40px; height: 40px;margin-left: 20px; color: blue;"*ngIf="changed"> </ion-icon>
+
+   <h6 style="font-family:FreeMono, monospace ;margin-left: 20px;">J'aime </h6>
+</ion-content>

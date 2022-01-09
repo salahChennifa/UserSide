@@ -1,0 +1,143 @@
+<ion-header>
+
+  <div class="space-between">
+    
+    <div class="followings">
+      <ion-icon  name="arrow-back-outline" (click)="back()" style="color: black; height: 30px; width: 30px;"></ion-icon>
+      <!-- <p>Edit</p> -->
+    </div>
+    
+  </div>
+</ion-header>
+<ion-content >
+  <div class="quizForm">
+    <div *ngIf="!isAanserd" class="notAnswer">
+      <div class="question">
+        <ion-text  style="color: black;">
+          <h1>{{QuizData.user[getIndexQuiz()].question}} </h1>
+        </ion-text>
+      </div>
+  
+      <div class="options">
+        <button *ngFor="let option of QuizData.user[getIndexQuiz()].option let i = index" [attr.data-index]="i" class="btn rounded" (click)="click(i)">
+          <span class="text-green">{{option}}</span>
+        </button>
+      </div>
+      <ion-text>
+        <span  style="font-family:FreeMono, monospace ;"> <ion-icon name="star"></ion-icon>{{sumPoint}} points</span>
+      </ion-text>
+    </div>
+  
+    <div *ngIf="isAanserd && !value" class="answerFalse" >
+      <div class="question">
+        <ion-text  style="color: black;">
+          <h1>{{QuizData.user[getIndexQuiz()].question}}</h1>
+        </ion-text>
+        <ion-icon name="thumbs-down-outline" style="width: 50px; height: 50px;"></ion-icon>
+            <h1 style="font-family:FreeMono, monospace ;">OOPs !</h1>
+            <ion-button (click)="reset()" expand="block" fill="clear" shape="round">
+              <p><ion-icon  name="refresh-outline" ></ion-icon>&nbsp;Réessayer</p>
+            </ion-button>
+            
+      </div>
+      
+  
+    </div>
+    <div *ngIf="isAanserd && value && this.QuizData.user.length == getIndexQuiz()" class="answerTrue">
+      <div class="question">
+        <ion-text  style="color: black;">
+          <!-- <h1>{{QuizData.user[getIndexQuiz()].question}}</h1> -->
+        </ion-text>
+        <ion-icon name="thumbs-up-outline" style="width: 50px; height: 50px;" ></ion-icon>
+          <h1 style="font-family:FreeMono, monospace ;">Bravo !</h1>
+  
+          <ion-text>
+            <span style="font-family:FreeMono, monospace ;"> <ion-icon name="star"></ion-icon>{{sumPoint}} points</span>
+          </ion-text>
+  
+      <br>
+      <br>
+        
+          <div class="actualitePart">
+            <div class="live-event">
+              <img src="../../assets/icon/image.png" />
+          
+              <div class="info">
+                <div class="content">
+                  <h6>Commencer "stoper la pollution"</h6>
+          
+                  <p class="stats">
+                    <span>&nbsp;TED</span>
+                  </p>
+                </div>
+          
+                <div class="indicator">
+                  <div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="live-event">
+              <img src="../../assets/icon/image.png" />
+              <div class="info">
+                <div class="content">
+                  <h6>Stop pollution</h6>
+          
+                  <p class="stats">
+                    <span >&nbsp;TED</span>
+                  </p>
+                </div>
+          
+                <div class="indicator">
+                  <div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="live-event">
+              <img src="../../assets/icon/image.png" />  
+              <div class="info">
+                <div class="content">
+                  <h6>Stop pollution</h6>
+          
+                  <p class="stats">
+                    <span >&nbsp;messionToTehmoon</span>
+                  </p>
+                </div>
+          
+                <div class="indicator">
+                  <div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="live-event">
+              <img src="../../assets/icon/image.png" />
+              <div class="info">
+                <div class="content">
+                  <h6>Stop pollution</h6>
+          
+                  <p class="stats">
+                    <span >&nbsp;GetTalks</span>
+                  </p>
+                </div>
+          
+                <div class="indicator">
+                  <div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+  
+    </div>
+  </div>
+  
+</ion-content>

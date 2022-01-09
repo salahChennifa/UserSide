@@ -1,0 +1,295 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-button>
+				<ion-menu-button menu="menu-content"></ion-menu-button>
+			</ion-button>
+		</ion-buttons>
+
+		<ion-buttons slot="end">
+			<ion-button class="bordered" fill="solid" color="light">
+				<ion-icon name="language-outline"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+
+	<ion-item lines="none">
+		<ion-avatar slot="start">
+			<img src={{user.imageUrl}}>
+    </ion-avatar>
+			<ion-label>
+				<p>Hello,</p>
+				<h3>{{user.name}}</h3>
+				<!-- <h3 [infoUser]="user.name"></h3> -->
+
+       
+			</ion-label>
+      <ion-avatar>
+        <img src="../../assets/icon/ions.png">
+      </ion-avatar>
+
+      <div style="float:right;">
+        <ion-label class="ion-align-items-right">
+          <p style="text-align: end;">Points</p>
+          <h5 style="text-align: center;">{{user.nbrPoints}}</h5>
+        </ion-label>
+      </div>
+	</ion-item>
+
+  <!-- //---------------- -->
+ 
+  <!-- //--------------------- -->
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="slides ion-margin-bottom">
+    <ion-slides [options]="slidesOptions">
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="main">
+              <img src="../../assets/icon/mountain-peak (1).svg">
+            </div>
+            <!-- <img class="files" src="https://i.ibb.co/jD8ypLq/files.jpg"> -->
+          </ion-card-header>
+          <ion-card-content class="ion-text-left">
+            <ion-card-title class="ion-margin-bottom">Défis en cours</ion-card-title>
+            <ion-card-subtitle class="ion-text-left">
+              vous avez 4 défis 
+            </ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <div class="main">
+              <img src="../../assets/icon/quiz.svg">
+            </div>
+            <!-- <img class="files" src="https://i.ibb.co/jD8ypLq/files.jpg"> -->
+          </ion-card-header>
+          <ion-card-content class="ion-text-left"  (click)="getQuiz()">
+            <ion-card-title class="ion-margin-bottom">quiz du jour  <span style="float: right;" class="point"> <ion-icon name="star-outline"></ion-icon>{{user.nbrPoints}} points</span></ion-card-title>
+            <ion-card-subtitle class="ion-text-left">comment arreter la pollution?</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+
+  <!-- Recommande -->
+  <!-- <div class="recommand">
+    <div class="firstPart">
+      <ion-item lines="none">
+          <ion-label slot="start">
+            <span class="firstPart_title">Recommender</span>
+          </ion-label>
+          <ion-label slot="end">
+            <a>voir plus</a>
+          </ion-label>
+      </ion-item>
+    </div>
+    <div class="firstPart">
+
+    </div>
+  </div> -->
+
+  <!-- Recommender try 2 -->
+  <div class="default-top-padding title">
+    <h2>Recommander</h2>
+
+    <p>voir plus</p>
+  </div>
+
+  <div class="recommendePart">
+    <div class="live-event">
+      <img src="../../assets/icon/ions.png" />
+  
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span class="arrow-highlight">&nbsp;foret</span><span style="float: right;" class="point"> <ion-icon name="star"></ion-icon>25 points</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="live-event">
+      <img src="../../assets/icon/ions.png" />
+  
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span class="arrow-highlight">&nbsp;foret</span><span style="float: right;" class="point"> <ion-icon name="star"></ion-icon>25 points</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="live-event">
+      <img src="../../assets/icon/ions.png" />
+  
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span class="arrow-highlight">&nbsp;Eaux</span><span style="float: right;" class="point"> <ion-icon name="star"></ion-icon>60 points</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="live-event">
+      <img src="../../assets/icon/ions.png" />
+  
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span class="arrow-highlight">&nbsp;Eaux</span><span style="float: right;" class="point"> <ion-icon name="star"></ion-icon>60 points</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="globaleT">
+    <div class="live-event">
+      <div class="info">
+        <div class="content">
+          <h6>Invetez des amis et partager les défis avec aux</h6>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <img src="../../assets/icon/team.png" >
+          </div>
+        </div>
+       
+      </div>
+      
+    </div>
+  
+  </div>
+
+
+  <!-- /// -->
+  <div class="default-top-padding title">
+    <h2>Actualités</h2>
+
+    <p>voir plus</p>
+  </div>
+
+  <div class="actualitePart" *ngFor="let new of lists">
+    <div class="live-event" routerLink="/news/{{new.id}}">
+      <img src="../../assets/icon/image.png" />
+  
+      <div class="info">
+        <div class="content">
+          <h6>{{new.title}}</h6>
+  
+          <p class="stats">
+            <span>&nbsp;{{new.date}}</span>
+          </p>
+
+          <p class="stats">
+            <span>&nbsp;{{new.id}}</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="live-event">
+      <img src="../../assets/icon/image.png" />
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span >&nbsp;TED</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="live-event">
+      <img src="../../assets/icon/image.png" />  
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span >&nbsp;messionToTehmoon</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="live-event">
+      <img src="../../assets/icon/image.png" />
+      <div class="info">
+        <div class="content">
+          <h6>Stop pollution</h6>
+  
+          <p class="stats">
+            <span >&nbsp;GetTalks</span>
+          </p>
+        </div>
+  
+        <div class="indicator">
+          <div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+  
+</ion-content>

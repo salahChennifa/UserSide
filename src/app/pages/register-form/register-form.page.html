@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button>
+        <ion-back-button defaultHref="/login" text="retour"></ion-back-button>
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="ion-padding ion-text-center">
+
+  <p></p>
+  <br>
+  <div class="logo">
+    <div class="flex">
+      <div class="box-border">
+        <div class="border-white">
+          <div class="img-box">
+            <img src="../../../assets/icon/care.png" style="width: 50px; height: 50px;">
+          </div>
+        </div>
+      </div>
+      
+    </div>
+   
+   <i > <h2><span >Register</span></h2> </i> 
+  </div>
+   <p>  </p>
+  
+    <div class="form" >
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Entrer votre nom" [(ngModel)]='name' required  #userName= "ngModel"        
+        [ngClass]="{'is-invalid': userName.errors && userName.touched}"
+        [ngModelOptions]="{updateOn: 'blur'}"></ion-input>
+        <div [hidden]="!userName.errors?.required" class="invalid-feedback">
+          Name is required
+       </div>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Entrer votre Email" [(ngModel)]='email' required  #userEmail= "ngModel"        
+        [ngClass]="{'is-invalid': userEmail.errors && userEmail.touched}"
+        [ngModelOptions]="{updateOn: 'blur'}"></ion-input>
+        <div [hidden]="!userEmail.errors?.required" class="invalid-feedback">
+          Email is required
+       </div>
+      </ion-item>
+  
+      <ion-item lines="none">
+        <ion-input type="password" placeholder="Entrer votre Password" [(ngModel)]='password' required  #userPassword= "ngModel"        
+        [ngClass]="{'is-invalid': userPassword.errors && userPassword.touched}"
+        [ngModelOptions]="{updateOn: 'blur'}"></ion-input>
+        <div [hidden]="!userPassword.errors?.required" class="invalid-feedback">
+          Password is required
+       </div>
+      </ion-item>
+  
+    <ion-item lines="none">
+      <ion-input placeholder="Confirmer mot de passe" type="password" [(ngModel)]='ConfirmPassword' (ionChange)="checkPassword()"></ion-input>
+
+      <ion-text color='success' *ngIf='passwordMatched && password'>Correct</ion-text>
+      <ion-text color='danger' *ngIf='!passwordMatched && password'>Erreur</ion-text>
+
+    </ion-item>
+  
+    <br>
+    <ion-button [disabled]="!passwordMatched " color="dark" (click)="register()"><i>S'inscrire</i></ion-button>
+  
+  </div>
